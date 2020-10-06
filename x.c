@@ -22,6 +22,7 @@ char *argv0;
 #if LIGATURES_PATCH
 #include "hb.h"
 #endif // LIGATURES_PATCH
+#include "hb.h"
 
 #if THEMED_CURSOR_PATCH
 #include <X11/Xcursor/Xcursor.h>
