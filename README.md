@@ -15,6 +15,10 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
 
 ### Changelog:
 
+2020-11-14 - Added the wide glyphs patch
+
+2020-10-23 - Added the monochrome patch
+
 2020-08-08 - Re-added the visualbell patch
 
 2020-06-26 - Added the single drawable buffer patch as per the FAQ in order to get w3m images to display
@@ -52,6 +56,9 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
 
    - [anysize](https://st.suckless.org/patches/anysize/)
       - allows st to reize to any pixel size rather than snapping to character width / height
+
+   - [anysize_nobar](https://github.com/connor-brooks/st-anysize-nobar)
+      - a patch that aims to prevent black bars being drawn on the edges of st terminals using the anysize patch
 
    - [bold-is-not-bright](https://st.suckless.org/patches/bold-is-not-bright/)
       - by default bold text is rendered with a bold font in the bright variant of the current color
@@ -108,6 +115,9 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
    - [ligatures](https://st.suckless.org/patches/ligatures/)
       - adds support for drawing ligatures using the Harfbuzz library to transform original text of a single line to a list of glyphs with ligatures included
 
+   - [monochrome](https://www.reddit.com/r/suckless/comments/ixbx6z/how_to_use_black_and_white_only_for_st/)
+      - makes st ignore terminal color attributes to make for a monochrome look
+
    - [newterm](https://st.suckless.org/patches/newterm/)
       - allows you to spawn a new st terminal using Ctrl-Shift-Return
       - it will have the same CWD (current working directory) as the original st instance
@@ -142,6 +152,9 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
 
    - [w3m](https://st.suckless.org/patches/w3m/)
       - adds support for w3m images
+
+   - [wide-glyphs](https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st/)
+      - adds proper support for wide glyphs, as opposed to rendering smaller or cut glyphs
 
    - [workingdir](https://st.suckless.org/patches/workingdir/)
       - allows user to specify the initial path st should use as the working directory

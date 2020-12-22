@@ -21,6 +21,15 @@
  */
 #define ANYSIZE_PATCH 0
 
+/* This patch aims to prevent black bars being drawn on the edges of st terminals using the anysize
+ * patch. This generally only occurs when the terminal background color doesn't match the colors
+ * set in st's config.h file, for example when using terminal theming scripts such as base16.
+ * (I have not found this to be working, but adding for reference. May reduce flickering on
+ * terminal resizes.)
+ * https://github.com/connor-brooks/st-anysize-nobar
+ */
+#define ANYSIZE_NOBAR_PATCH 0
+
 /* By default bold text is rendered with a bold font in the bright variant of the current color.
  * This patch makes bold text rendered simply as bold, leaving the color unaffected.
  * https://st.suckless.org/patches/bold-is-not-bright/
@@ -137,6 +146,12 @@
  */
 #define LIGATURES_PATCH 0
 
+/* This patch makes st ignore terminal color attributes by forcing display of the default
+ * foreground and background colors only - making for a monochrome look. Idea ref.
+ * https://www.reddit.com/r/suckless/comments/ixbx6z/how_to_use_black_and_white_only_for_st/
+ */
+#define MONOCHROME_PATCH 0
+
 /* This patch allows you to spawn a new st terminal using Ctrl-Shift-Return. It will have the
  * same CWD (current working directory) as the original st instance.
  * https://st.suckless.org/patches/newterm/
@@ -219,6 +234,13 @@
  * https://st.suckless.org/patches/w3m/
  */
 #define W3M_PATCH 0
+
+/* Adds proper glyphs rendering in st allowing wide glyphs to be drawn as-is as opposed to
+ * smaller or cut glyphs being rendered.
+ * https://github.com/Dreomite/st/commit/e3b821dcb3511d60341dec35ee05a4a0abfef7f2
+ * https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st/
+ */
+#define WIDE_GLYPHS_PATCH 0
 
 /* This patch allows user to specify the initial path st should use as the working directory.
  * https://st.suckless.org/patches/workingdir/
